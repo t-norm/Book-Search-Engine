@@ -28,7 +28,6 @@ app.get("*", (req, res) => {
 });
 
 db.once('open', () => {
-  console.log(`GraphQL server ready at http://localhost:${PORT}${server.graphqlPath}`);
   app.listen(PORT, () => console.log(`Listening on localhost:${PORT}
   ███████████████████████████
   ███████▀▀▀░░░░░░░▀▀▀███████
@@ -54,4 +53,5 @@ db.once('open', () => {
       You're now online
   ===========================  
   `));
+  console.log(`GraphQL server ready at http://localhost:${PORT}${server.graphqlPath}`);
 });
